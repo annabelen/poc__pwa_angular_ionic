@@ -1,0 +1,14 @@
+<!-- TODO REVIEW SI SE MAQUETA ASÍ -->
+<div id="content" class="container mx-auto px-4 pt-14 sm:px-6 lg:px-8">
+  <a href="/home">Acceder a la home</a>
+    <h1 class="block c-h1 my-7">Accede a la carpeta ciudadana </h1>
+
+    <div id="iframe-login" style='height: 100vh;' class='my-7' *ngIf="this.safeURL">
+        <iframe title='Accede a la herramienta de Gestión de Carnets' id="mfe_iframe" width="100%" height="100%" [src]="this.safeURL">
+        </iframe>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,61 @@
+
+
+<ion-content [fullscreen]="true">
+
+    <!-- <div class="mt-12">
+        <desy-header
+            [subnavData]="{ text: 'Carpeta ciudadana' }"
+            homepageRouterLink=''
+            [expandedLogo]=true
+            [offcanvasData]="{text: 'Menu', textClose:'Cerrar menu', labelledId:'offcanvas-title', contentHtml: headerOffCanvasMenu}">
+            <ng-template #headerOffCanvasMenu>
+            <nav class="w-full p-2" aria-label="Menú móvil">
+                <h3 class="p-base text-base font-bold">Carpeta ciudadana</h3>
+                <desy-nav idPrefix="nav-mobile-pages" hasNav="false" ariaLabel="Lista de páginas"
+                [items]="[{text: 'Item 1', routerLink:'/item1'}]">
+                </desy-nav>
+            </nav>
+            </ng-template>
+        </desy-header>
+    </div> -->
+
+    <div id="container mx-auto " style='margin: 0 1rem'>
+
+        <div class="block c-h1 mt-6 mb-5">Te damos la bienvenida a Carpeta Ciudad de Aragón</div>
+        <p class="mb-8">Estas identificado como <strong>Tomás Pérex Palacion - 245587474N</strong></p>
+
+        <h2 class="block c-h2 mt-6  justify-self-start">Datos de contacto</h2>
+
+        <p class="block mb-8" style='margin-bottom: 1rem'>Necesitamos estos datos para enviarte avisos puntuales sobre tus trámites y notificaciones</p>
+
+        <form class="form" [formGroup]="form" (ngSubmit)="dummy()">
+
+            <div class="grid grid-flow-col grid-cols-1">
+                <desy-input id="mail" name="mail" inputmode="text"  ariaLabel="mail" labelText="Correo electrónico" formControlName="mail"
+                classes="w-full c-input block mt-sm border-black rounded font-semibold placeholder-neutral-dark focus:border-black focus:shadow-outline-focus-input focus:ring-4 focus:ring-warning-base disabled:bg-neutral-light disabled:border-neutral-base">
+                </desy-input>
+            </div>
+
+            <div class="grid grid-flow-col grid-cols-1">
+                <desy-input id="movil" name="movil" inputmode="text"  ariaLabel="movil" labelText="Teléfono móvil" formControlName="movil"
+                classes="w-full c-input block mt-sm border-black rounded font-semibold placeholder-neutral-dark focus:border-black focus:shadow-outline-focus-input focus:ring-4 focus:ring-warning-base disabled:bg-neutral-light disabled:border-neutral-base">
+                </desy-input>
+            </div>
+
+            <div id="buttons" class="flex flex-auto w-4/15 justify-end">
+                <desy-button type="submit" text="Guardar" classes="c-button--primary my-4 ml-4" ariaLabel="buscar"></desy-button>
+            </div>
+
+        </form>
+
+        <div (click)="getMfe()">
+          Hacer peticion API MFE >
+          <p>- {{respuesta}} -</p>
+        </div>
+
+
+   </div>
+
+
+
+</ion-content>
